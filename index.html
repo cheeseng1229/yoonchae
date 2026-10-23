@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarBlox Academy: Malaysia Primary 3 (KSSR Semakan) Roblox x K-Pop</title>
+  
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient floating sparkles background -->
+  <div class="ambient-sparkles"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-navbar">
+    <div class="brand-section">
+      <div class="brand-logo-icon">⭐</div>
+      <div>
+        <h1 class="brand-title">STARBLOX ACADEMY</h1>
+        <p class="brand-subtitle">Malaysia Primary 3 • KSSR Semakan • Roblox x K-Pop</p>
+      </div>
+    </div>
+
+    <!-- Live User Stats -->
+    <div class="nav-stats-section">
+      <div class="stat-badge starbux">
+        <span id="stat-user-starbux">250 🪙</span>
+      </div>
+      <div class="stat-badge streak">
+        <span id="stat-user-streak">🔥 3 Hari Berturut</span>
+      </div>
+      <div class="stat-badge">
+        <span id="stat-user-level">Lv. 1 Trainee</span>
+      </div>
+    </div>
+
+    <!-- Nav Quick Action Buttons -->
+    <div class="nav-actions">
+      <button id="btn-sound-toggle" class="nav-btn">🔊 Sound: ON</button>
+      <button id="btn-bgm-toggle" class="nav-btn">🎵 K-Pop Beat: OFF</button>
+      <button id="btn-open-avatar" class="nav-btn">👗 Avatar</button>
+      <button id="btn-open-cards" class="nav-btn">🃏 Photocards</button>
+      <button id="btn-open-shop" class="nav-btn">🛒 Shop</button>
+      <button id="btn-open-guide" class="nav-btn">📘 Panduan KSSR</button>
+    </div>
+  </header>
+
+  <!-- Roblox Obby Course Strip -->
+  <div class="obby-strip">
+    <div class="obby-label">🏃‍♀️ ROBLOX OBBY PROGRESS:</div>
+    <div class="obby-track" id="obby-track-container">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="main-layout">
+    
+    <!-- Day / Dosage Selector -->
+    <div class="day-selector-strip" id="day-selector-container">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- 5 Core Subjects Bar -->
+    <nav class="subjects-bar">
+      <button class="subject-tab active" data-subject="bm">
+        <span class="sub-icon">🇲🇾</span>
+        <span class="sub-title">Bahasa Melayu</span>
+        <span class="sub-badge">KSSR SK/SJK</span>
+      </button>
+
+      <button class="subject-tab" data-subject="bc">
+        <span class="sub-icon">🇨🇳</span>
+        <span class="sub-title">华文 (Chinese)</span>
+        <span class="sub-badge">KSSR SJKC</span>
+      </button>
+
+      <button class="subject-tab" data-subject="bi">
+        <span class="sub-icon">🇬🇧</span>
+        <span class="sub-title">English</span>
+        <span class="sub-badge">CEFR Year 3</span>
+      </button>
+
+      <button class="subject-tab" data-subject="sc">
+        <span class="sub-icon">🔬</span>
+        <span class="sub-title">Sains (Science)</span>
+        <span class="sub-badge">Inkuiri & Hayat</span>
+      </button>
+
+      <button class="subject-tab" data-subject="ma">
+        <span class="sub-icon">🔢</span>
+        <span class="sub-title">Matematik</span>
+        <span class="sub-badge">Nombor & Operasi</span>
+      </button>
+    </nav>
+
+    <!-- 4 Multi-Modal Learning Tabs (Read / Write / Speak / Worksheet) -->
+    <nav class="modes-bar">
+      <button class="mode-tab active" data-mode="read">
+        <span>📖</span> 1. BACA (Read Aloud)
+      </button>
+      <button class="mode-tab" data-mode="write">
+        <span>✍️</span> 2. TULIS (Trace & Quiz)
+      </button>
+      <button class="mode-tab" data-mode="speak">
+        <span>🎤</span> 3. SEBUT (Voice Mic Stage)
+      </button>
+      <button class="mode-tab" data-mode="worksheet">
+        <span>📝</span> 4. LEMBARAN (Daily Worksheet)
+      </button>
+    </nav>
+
+    <!-- Current Lesson Header Banner -->
+    <section class="lesson-header-card glass-panel">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <span class="badge-tag" id="lesson-day-title">Hari Pertama: Pengenalan</span>
+          <div class="banner-kpop" id="lesson-kpop-banner">✨ Debut Stage Challenge</div>
+          <h2 class="lesson-topic-title" id="lesson-topic-title">Tema 1: Kekeluargaan</h2>
+          <p class="lesson-standard-code" id="lesson-standard-code">Standard Pembelajaran: SP 1.1.1, 2.1.1, 5.1.1</p>
+        </div>
+        <div style="text-align:right;">
+          <span style="font-size:0.75rem; color:#ffb8d2; font-weight:700;">LIGHTSTICK POWER</span>
+          <div style="width:140px; height:12px; background:rgba(255,255,255,0.1); border-radius:6px; overflow:hidden; border:1px solid #ff4785; margin-top:4px;">
+            <div id="stat-lightstick-bar" style="width:40%; height:100%; background:linear-gradient(90deg, #ff4785, #feca57);"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Learning Content Area -->
+    <div id="lesson-content-area">
+      <!-- Injected by app.js: Read / Write / Speak / Worksheet -->
+    </div>
+
+  </main>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- 1. AVATAR CLOSET MODAL -->
+  <div id="modal-avatar" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>👗 Roblox x K-Pop Avatar Closet</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="avatar-builder-layout">
+        <div class="avatar-stage-podium">
+          <div id="avatar-display-preview"></div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:12px; color:#feca57;">Sesuaikan Penampilan Bintangmu:</h3>
+          <p style="font-size:0.85rem; color:#dcdde1; margin-bottom:16px;">Pilih gaya rambut, kostum konsert, dan haiwan peliharaan kegemaranmu!</p>
+          
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div>
+              <label style="font-size:0.8rem; font-weight:700;">Rambut (Hair):</label>
+              <select id="select-avatar-hair" class="worksheet-input" style="width:100%; margin-top:4px;">
+                <option value="pink_twintails">💖 K-Pop Pink Twin-tails</option>
+                <option value="neon_blue">💙 Cyber Neon Blue</option>
+                <option value="golden_star">⭐ Golden Idol Waves</option>
+                <option value="glossy_black">🖤 Sleek Black Ponytail</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:0.8rem; font-weight:700;">Kostum (Outfit):</label>
+              <select id="select-avatar-outfit" class="worksheet-input" style="width:100%; margin-top:4px;">
+                <option value="kpop_stage">✨ K-Pop Stage Sparkle</option>
+                <option value="roblox_hoodie">🎮 Bloxburg Cozy Hoodie</option>
+                <option value="fairy_dress">🧚 Neon Fairy Princess</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:0.8rem; font-weight:700;">Aksesori (Accessory):</label>
+              <select id="select-avatar-acc" class="worksheet-input" style="width:100%; margin-top:4px;">
+                <option value="lightstick">💖 Heart Lightstick</option>
+                <option value="visor">👑 Cyber Gaming Visor</option>
+                <option value="wings">🪽 Fairy Neon Wings</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:0.8rem; font-weight:700;">Haiwan Peliharaan (Pet):</label>
+              <select id="select-avatar-pet" class="worksheet-input" style="width:100%; margin-top:4px;">
+                <option value="neon_unicorn">🦄 Adopt Me Neon Unicorn</option>
+                <option value="kpop_hamster">🐹 Chibi K-Pop Hamster</option>
+                <option value="doge">🐕 Roblox Lucky Doge</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top:20px; text-align:right;">
+            <button id="btn-save-avatar" class="btn-action-primary">💾 Simpan Penampilan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. PHOTOCARDS ALBUM MODAL -->
+  <div id="modal-cards" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🃏 Koleksi K-Pop Idol Photocards</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <p style="font-size:0.85rem; color:#ffb8d2; margin-bottom:16px;">Selesaikan semua misi harian (Membaca, Menulis, Bertutur) untuk membuka kad holographic yang jarang ditemui!</p>
+      <div id="photocards-grid" class="photocards-grid">
+        <!-- Injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. SHOP MODAL -->
+  <div id="modal-shop" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🛒 Kedai Aksesori StarBlox</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <p style="font-size:0.85rem; color:#feca57; margin-bottom:16px;">Gunakan Starbux yang dikumpul daripada pembelajaran untuk membeli item eksklusif!</p>
+      <div id="shop-items-list" class="shop-items-grid">
+        <!-- Injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. PARENTS GUIDE & SYLLABUS MODAL -->
+  <div id="modal-guide" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>📘 Panduan Kurikulum Malaysia Tahun 3 (KSSR Semakan)</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:#e1e2e6;">
+        <h4 style="color:#feca57; margin-bottom:6px;">Matlamat Pembelajaran Tahun 3 (DSKP KPM):</h4>
+        <ul style="padding-left:20px; margin-bottom:14px;">
+          <li><strong>Bahasa Melayu:</strong> Menguasai 8 Tema Utama (Kekeluargaan, Kesihatan, Keselamatan, Perpaduan, Kebudayaan, Kewarganegaraan, Sains & Inovasi, Pertanian). Fokus Tatabahasa: Kata Nama Am/Khas, Kata Kerja Aktif Transitif, Kata Adjektif, Kata Hubung, Imbuhan Awalan, Penjodoh Bilangan.</li>
+          <li><strong>华文 (Bahasa Cina SJKC):</strong> 学习20个单元核心生字、笔顺部首（如宀、米、巛）、关联词（一边……一边……）、标点符号（冒号与引号）、本土传统美食与文化、成语故事理解与朗读。</li>
+          <li><strong>English (CEFR Year 3):</strong> Modules from <em>Get Smart Plus 3</em> focusing on appearances (have got/has got), daily routines & telling time (half past), present continuous tense, comparative adjectives (-er than), prepositions of place, and food quantifiers (some/any).</li>
+          <li><strong>Sains (Science):</strong> 10 Unit Utama merangkumi Kemahiran Saintifik, Jenis Gigi & Pencernaan Makanan, Tabiat Pemakanan Haiwan (Herbivor, Karnivor, Omnivor), Pembiakan Tumbuhan (6 cara), Pengukuran Luas & Ketumpatan, Asid & Alkali, serta Sistem Suria (8 buah planet).</li>
+          <li><strong>Matematik:</strong> Nombor bulat hingga 10 000, Nilai tempat/digit, Membundar nombor, Operasi asas (+, -, ×, ÷), Pecahan setara, Perpuluhan, Peratus %, dan Pengurusan Wang hingga RM10 000.</li>
+        </ul>
+
+        <h4 style="color:#00d2d3; margin-bottom:6px;">Cadangan Rutin Harian untuk Anak:</h4>
+        <p>1. <strong>BACA (10 minit):</strong> Dengarkan audio suara dan baca petikan bersama-sama.<br>
+           2. <strong>TULIS (10 minit):</strong> Latih menulis di atas kanvas digital dan selesaikan kuiz tatabahasa/matematik.<br>
+           3. <strong>SEBUT (5 minit):</strong> Tekan butang mikrofon untuk menguji sebutan dan kelancaran bertutur.<br>
+           4. <strong>LEMBARAN (10 minit):</strong> Cetak lembaran kerja harian dengan butang 'Cetak' untuk latihan bertulis pensel di atas kertas.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="curriculum.js"></script>
+  <script src="audio.js"></script>
+  <script src="speech.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    // Handle Avatar Customizer Save
+    document.getElementById("btn-save-avatar")?.addEventListener("click", () => {
+      const hair = document.getElementById("select-avatar-hair").value;
+      const outfit = document.getElementById("select-avatar-outfit").value;
+      const acc = document.getElementById("select-avatar-acc").value;
+      const pet = document.getElementById("select-avatar-pet").value;
+
+      window.starbloxApp.state.avatar = { hair, outfit, accessory: acc, pet };
+      window.starbloxApp.saveState();
+      window.starbloxApp.renderAvatarPreview();
+      window.soundEngine.playFanfare();
+      document.getElementById("modal-avatar").style.display = "none";
+      window.starbloxApp.showToast("💖 Penampilan avatar berjaya dikemas kini!", "success");
+    });
+  </script>
+</body>
+</html>
